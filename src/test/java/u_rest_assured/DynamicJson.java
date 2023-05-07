@@ -38,8 +38,9 @@ public class DynamicJson {
 
     @Test(priority = 2)
     public void deleteBook() {
-        RestAssured.baseURI = "http://216.10.245.166" ;
         for (String s : al) {
+            System.out.println("Trying with "+ s);
+            RestAssured.baseURI = "http://216.10.245.166" ;
             given().header("Content-Type", "application/json")
                     .body(payload.deleteBook(s))
                     .when().post("Library/DeleteBook.php")

@@ -18,6 +18,6 @@ public class ExplicitJson {
                 .when().post("maps/api/place/add/json")
                 .then().log().all().assertThat().statusCode(200)
                 .body("scope", equalTo("APP"))
-                .header("Server", "Apache/2.4.41 (Ubuntu)").extract().asString();
+                .header("Server", "Apache/2.4.52 (Ubuntu)").extract().asString();
     }
 }

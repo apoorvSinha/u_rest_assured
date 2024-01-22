@@ -17,7 +17,7 @@ public class getBreeds {
     private String getKey() {
         BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader("./src/test/java/theCats/env"));
+            reader = new BufferedReader(new FileReader("./src/test/java/theCats/env.txt"));
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }

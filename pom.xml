@@ -3,10 +3,6 @@
 	<groupId>u_rest_assured</groupId>
 	<artifactId>u_rest_assured</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<properties>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
-	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
 		<dependency>
@@ -69,4 +65,16 @@
 		</dependency>
 
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>15</source>
+					<target>15</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

@@ -48,6 +48,7 @@ public class getBreeds {
         writer.close();
     }
 
+
     public static String[] getImages(){
         String response = given().log().all().header("x-api-key", new getBreeds().getKey())
                 .header("Content-Type", "application/json")

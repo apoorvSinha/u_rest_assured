@@ -5,6 +5,7 @@ import io.restassured.path.json.JsonPath;
 
 import java.io.*;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.logging.FileHandler;
 
@@ -12,8 +13,13 @@ import static io.restassured.RestAssured.given;
 
 public class getBreeds {
     static JsonPath js;
+    static HashMap<String, String> qpBreed = new HashMap<>();
+
     public static void main(String[] args) throws IOException {
         RestAssured.baseURI = "https://api.thecatapi.com/";
+        qpBreed.put("has_breeds", "1");
+        qpBreed.put("order", "ASC");
+        qpBreed.put("limit", "10");
         StringBuffer str = new StringBuffer();
         for(String string: getImages()){
             str.append(string +  "\n");
@@ -23,6 +29,7 @@ public class getBreeds {
 
 
     private String getKey() {
+
         BufferedReader reader;
         try {
             reader = new BufferedReader(new FileReader("./src/test/java/theCats/env.txt"));

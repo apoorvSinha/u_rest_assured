@@ -15,7 +15,7 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 
 public class DynamicJson {
-    ArrayList<String> al = new ArrayList<String>();
+    ArrayList<String> al = new ArrayList<>();
 
     @Test(dataProvider = "bookData", priority = 1)
     public void addBook(String isbn, String aisle) {
